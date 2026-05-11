@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Wedding RSVP </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=IM+Fell+DW+Pica:ital@0;1&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- メインカード -->
+<div class="card-wrapper">
+<article class="card">
+
+    <div class="card-inner">
+
+        <!-- ヘッダー -->
+        
+        <div class="pink-section">
+            <header class="page-header">
+                <p class="eyebrow">— You are cordially invited —</p>
+                <div class="header-ornament">❦</div>
+                <h1 class="main-title">Wedding Party</h1>
+                <div class="gold-rule">
+                    <span class="rule-line"></span>
+                    <span class="rule-diamond">◆</span>
+                    <span class="rule-line"></span>
+                </div>
+            </header>
+
+            <!-- ===== RSVP ===== -->
+            <section class="rsvp-section">
+                <h2 class="sec-title">
+                    <span class="sec-en">RSVP</span>
+                    <span class="sec-ja">ご出欠のご返答</span>
+                </h2>
+
+                <p class="rsvp-note">
+                    お手数ではございますが<br>
+                    下記期限までにご回答くださいませ
+                </p>
+
+                <div class="deadline">
+                    <span class="dl-label">回答期限</span>
+                    <span class="dl-date">2026 / 08 / 31</span>
+                </div>
+            </section>
+        </div>
+
+        <form class="rsvp-form" id="rsvpForm" action="https://formspree.io/f/xlgzagnw" method="POST">
+
+            <!-- 出欠カード -->
+            <div class="fb">
+                <div class="fl">ご出席 <span class="req">必須</span></div>
+                <div class="attend-cards">
+                    <label class="ac">
+                        <input type="radio" name="attendance" value="喜んで出席いたします" required>
+                        <span class="ac-body">
+                            <span class="ac-emoji">🎀</span>
+                            <span class="ac-text">ご出席</span>
+                        </span>
+                    </label>
+                    <label class="ac">
+                        <input type="radio" name="attendance" value="誠に残念ながら欠席いたします">
+                        <span class="ac-body">
+                            <span class="ac-emoji">🕊️</span>
+                            <span class="ac-text">ご欠席</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- お名前 -->
+            <div class="fb">
+                <div class="fl">お名前 <span class="req">必須</span></div>
+                <div class="name-row">
+                    <div class="nc"><span class="nh">姓</span><input type="text" name="lastName" placeholder="田中" required autocomplete="family-name"></div>
+                    <div class="nc"><span class="nh">名</span><input type="text" name="firstName" placeholder="太郎" required autocomplete="given-name"></div>
+                </div>
+            </div>
+
+            <!-- フリガナ -->
+            <div class="fb">
+                <div class="fl">フリガナ <span class="req">必須</span></div>
+                <div class="name-row">
+                    <div class="nc"><span class="nh">セイ</span><input type="text" name="lastKana" placeholder="タナカ" required></div>
+                    <div class="nc"><span class="nh">メイ</span><input type="text" name="firstKana" placeholder="タロウ" required></div>
+                </div>
+            </div>
+
+            <!-- 郵便番号 -->
+            <div class="fb">
+                <div class="fl">郵便番号 <span class="req">必須</span></div>
+                <input type="text" name="postcode" placeholder="000-0000" required inputmode="numeric" maxlength="8">
+            </div>
+
+            <!-- 住所 -->
+            <div class="fb">
+                <div class="fl">ご住所 <span class="req">必須</span></div>
+                <input type="text" name="address" placeholder="愛知県名古屋市…" required autocomplete="street-address">
+            </div>
+
+            <!-- 電話番号 -->
+            <div class="fb">
+                <div class="fl">お電話番号 <span class="req">必須</span></div>
+                <input type="tel" name="phone" placeholder="000-0000-0000" required inputmode="tel">
+            </div>
+
+            <!-- アレルギー -->
+            <div class="fb">
+                <div class="fl">食物アレルギー</div>
+                <div class="radio-stack">
+                    <label class="rl"><input type="radio" name="allergy" value="ございません" checked><span>ございません</span></label>
+                    <label class="rl"><input type="radio" name="allergy" value="ございます" id="allergyYes"><span>ございます</span></label>
+                </div>
+                <div class="allergy-wrap" id="allergyWrap">
+                    <input type="text" name="allergyDetail" placeholder="内容をご記入ください">
+                </div>
+            </div>
+
+            <!-- メッセージ -->
+            <div class="fb">
+                <div class="fl">備考 <span class="opt">任意</span></div>
+                <textarea name="message" rows="4"></textarea>
+            </div>
+
+            <!-- 漢字署名 -->
+            <div class="couple-sig">
+                <div class="sig-orn">❧</div>
+                <p class="sig-name">川嶋　祥紀<br>藤本　かすみ</p>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="submit-wrap">
+                <button type="submit" class="btn-send">
+                        送　信 
+                </button>
+            </div>
+
+        </form>
+
+        <!-- 区切り線 -->
+        <div class="sep">
+            <span class="sep-line"></span>
+            <span class="sep-flower">𖤣𖥧𖥣｡𓂃</tool_call></span>
+            <span class="sep-line"></span>
+        </div>
+
+        <!-- ===== ACCESS ===== -->
+        <section class="access-section">
+            <h2 class="sec-title">
+                <span class="sec-en">ACCESS</span>
+                <span class="sec-ja">会場へのご案内</span>
+            </h2>
+
+            <div class="venue-card">
+
+                <p class="venue-name">RESTAURANT AMONDANS</p>
+                <p class="venue-addr">愛知県豊橋市柱八番町99-1</p>
+
+                <div class="access-list">
+                    <div class="ai">
+                        <span class="ai-icon">🚗</span>
+                        <div>
+                            <p class="ai-head">お車でお越しの方</p>
+                            <p class="ai-body">来客用駐車場が20台ございます</p>
+                        </div>
+                    </div>
+                    <div class="ai">
+                        <span class="ai-icon">🚃</span>
+                        <div>
+                            <p class="ai-head">電車でお越しの方</p>
+                            <p class="ai-body">名鉄・JR「豊橋駅」よりタクシー約10分<br>渥美線「愛知大学前駅」より徒歩約15分</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.503952555852!2d137.378962!3d34.74289600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004d22498369937%3A0x995d873274139854!2z44Ki44Oi44Oz44OA44Oz!5e0!3m2!1sja!2sjp!4v1775807881953!5m2!1sja!2sjp"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="会場地図">
+                </iframe>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <div class="footer-orn">❦</div>
+            <p> Wedding RSVP 2026</p>
+        </footer>
+
+        </div><!-- /frame-border -->
+    </div><!-- /card-inner -->
+
+</article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
