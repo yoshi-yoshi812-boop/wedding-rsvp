@@ -142,7 +142,8 @@ body {
 /* 曜日 */
 .weekday-arc {
   position: relative;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 70px;
   margin: 0 auto;
 
