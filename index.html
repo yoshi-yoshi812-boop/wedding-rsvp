@@ -5,7 +5,9 @@
     <title>Wedding RSVP </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=IM+Fell+DW+Pica:ital@0;1&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Amatic+SC:wght@400;700&family=BIZ+UDPMincho&family=Bad+Script&family=Cookie&family=Courgette&family=Damion&family=Grand+Hotel&family=Homemade+Apple&family=Miss+Fajardose&family=Mochiy+Pop+One&family=Mrs+Saint+Delafield&family=Pacifico&family=Parisienne&family=Pattaya&family=Pinyon+Script&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=Shippori+Mincho&family=Style+Script&family=Tangerine:wght@400;700&family=Walter+Turncoat&family=Yuji+Syuku&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -22,14 +24,46 @@
         <div class="pink-section">
             <header class="page-header">
                 <p class="eyebrow">— You are cordially invited —</p>
-                <div class="header-ornament">❦</div>
-                <h1 class="main-title">Wedding Party</h1>
-                <div class="gold-rule">
-                    <span class="rule-line"></span>
-                    <span class="rule-diamond">◆</span>
-                    <span class="rule-line"></span>
+                <h1 class="main-title">Welcome to Our<br>Wedding</h1>
+                
+                <div class="date-area">
+                    <div class="weekday-arc">
+                        <span style="--i:-2.5">S</span>
+                        <span style="--i:-1.5">U</span>
+                        <span style="--i:-0.5">N</span>
+                        <span style="--i:0.5">D</span>
+                        <span style="--i:1.5">A</span>
+                        <span style="--i:2.5">Y</span>
+                    </div>
+
+                    <div class="date-row">
+                        <div class="month-item">
+                            <span class="line"></span>
+                            <span class="month-text">October</span>
+                            <span class="line"></span>
+                        </div>
+
+                        <div class="day-item">
+                            <span class="day-text">25</span>
+                        </div>
+
+                        <div class="time-item">
+                            <span class="line"></span>
+                            <span class="time-text">11:30 AM</span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <div class="year">
+                        <span class="year-text">2026</span>
+                    </div>
                 </div>
             </header>
+
+            <!-- 区切り線 -->
+            <div class="dot-line">
+                <p>●　●　●　●　●　●　●　●　●　●</p> 
+            </div> 
 
             <!-- ===== RSVP ===== -->
             <section class="rsvp-section">
@@ -44,7 +78,6 @@
                 </p>
 
                 <div class="deadline">
-                    <span class="dl-label">回答期限</span>
                     <span class="dl-date">2026 / 08 / 31</span>
                 </div>
             </section>
@@ -77,8 +110,8 @@
             <div class="fb">
                 <div class="fl">お名前 <span class="req">必須</span></div>
                 <div class="name-row">
-                    <div class="nc"><span class="nh">姓</span><input type="text" name="lastName" placeholder="田中" required autocomplete="family-name"></div>
-                    <div class="nc"><span class="nh">名</span><input type="text" name="firstName" placeholder="太郎" required autocomplete="given-name"></div>
+                    <div class="nc"><span class="nh">姓</span><input type="text" name="lastName" required autocomplete="family-name"></div>
+                    <div class="nc"><span class="nh">名</span><input type="text" name="firstName" required autocomplete="given-name"></div>
                 </div>
             </div>
 
@@ -86,28 +119,47 @@
             <div class="fb">
                 <div class="fl">フリガナ <span class="req">必須</span></div>
                 <div class="name-row">
-                    <div class="nc"><span class="nh">セイ</span><input type="text" name="lastKana" placeholder="タナカ" required></div>
-                    <div class="nc"><span class="nh">メイ</span><input type="text" name="firstKana" placeholder="タロウ" required></div>
+                    <div class="nc"><span class="nh">セイ</span><input type="text" name="lastKana" required></div>
+                    <div class="nc"><span class="nh">メイ</span><input type="text" name="firstKana" required></div>
                 </div>
             </div>
 
             <!-- 郵便番号 -->
             <div class="fb">
                 <div class="fl">郵便番号 <span class="req">必須</span></div>
-                <input type="text" name="postcode" placeholder="000-0000" required inputmode="numeric" maxlength="8">
+                <input type="text" name="postcode" required inputmode="numeric" maxlength="8">
             </div>
 
             <!-- 住所 -->
             <div class="fb">
                 <div class="fl">ご住所 <span class="req">必須</span></div>
-                <input type="text" name="address" placeholder="愛知県名古屋市…" required autocomplete="street-address">
+                <input type="text" name="address"  required autocomplete="street-address">
             </div>
 
             <!-- 電話番号 -->
             <div class="fb">
                 <div class="fl">お電話番号 <span class="req">必須</span></div>
-                <input type="tel" name="phone" placeholder="000-0000-0000" required inputmode="tel">
+                <input type="tel" name="phone" required inputmode="tel">
             </div>
+
+            <!-- 交通手段 -->
+            <div class="fb">
+                <div class="fl">交通手段 <span class="req">必須</span></div>
+                <div class="radio-stack">
+                    <label class="rl"><input type="radio" name="transport" value="自家用車" checked><span>自家用車 (乗り合わせも含む)</span></label>
+                    <label class="rl"><input type="radio" name="transport" value="公共交通機関"><span>公共交通機関</span></label>
+                </div>
+                <div class="transport-wrap" id="transportWrap">
+                    <div class="radio-stack">
+                        <label class="rl"><input type="radio" name="taxi" value="タクシー利用しない" checked><span>タクシー利用しない</span></label>
+                        <label class="rl"><input type="radio" name="taxi" value="タクシー利用する" id="taxiYes"><span>タクシー利用する</span></label>
+                    </div>
+                </div>
+                <div class="transport-wrap" id="taxiDetailWrap">
+                    <textarea name="transportDetail" rows="2" placeholder="乗り合わせが決まっている場合は同行者のお名前を記入してください"></textarea>
+                </div>
+            </div>
+ 
 
             <!-- アレルギー -->
             <div class="fb">
@@ -129,8 +181,7 @@
 
             <!-- 漢字署名 -->
             <div class="couple-sig">
-                <div class="sig-orn">❧</div>
-                <p class="sig-name">川嶋　祥紀<br>藤本　かすみ</p>
+                <p class="sig-name">2026年7月吉日<br>川嶋　祥紀　<br>川嶋　かすみ<br>(旧姓：藤本)</p>
             </div>
 
             <!-- 送信ボタン -->
@@ -143,11 +194,10 @@
         </form>
 
         <!-- 区切り線 -->
-        <div class="sep">
-            <span class="sep-line"></span>
-            <span class="sep-flower">𖤣𖥧𖥣｡𓂃</tool_call></span>
-            <span class="sep-line"></span>
-        </div>
+        <div class="dot-line">
+            <p>●　●　●　●　●　●　●　●　●　●</p> 
+        </div> 
+
 
         <!-- ===== ACCESS ===== -->
         <section class="access-section">
@@ -159,18 +209,18 @@
             <div class="venue-card">
 
                 <p class="venue-name">RESTAURANT AMONDANS</p>
-                <p class="venue-addr">愛知県豊橋市柱八番町99-1</p>
+                <p class="venue-addr">愛知県豊橋市柱八番町99-1<br>
+                    TEL: 0532-38-5700<br>
+                    <a href="https://amondans.jp/" target="_blank" rel="noopener noreferrer">https://www.amondans.com/</a>  </p>
 
                 <div class="access-list">
                     <div class="ai">
-                        <span class="ai-icon">🚗</span>
                         <div>
                             <p class="ai-head">お車でお越しの方</p>
                             <p class="ai-body">来客用駐車場が20台ございます</p>
                         </div>
                     </div>
                     <div class="ai">
-                        <span class="ai-icon">🚃</span>
                         <div>
                             <p class="ai-head">電車でお越しの方</p>
                             <p class="ai-body">名鉄・JR「豊橋駅」よりタクシー約10分<br>渥美線「愛知大学前駅」より徒歩約15分</p>
@@ -188,11 +238,9 @@
         </section>
 
         <footer class="page-footer">
-            <div class="footer-orn">❦</div>
             <p> Wedding RSVP 2026</p>
         </footer>
 
-        </div><!-- /frame-border -->
     </div><!-- /card-inner -->
 
 </article>

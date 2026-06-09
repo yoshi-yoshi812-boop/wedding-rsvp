@@ -13,7 +13,7 @@
   --pk3: #d8bcc6;
   --pk4: #ecd8de;
   --pk5: #f7edf0;
-  --pk6: #ebbacf;
+  --pk6: pink;
 
   /* Dusty Blue */
   --bl1: #5a7090;
@@ -21,23 +21,35 @@
   --bl3: #aac4d6;
   --bl4: #cce0ee;
   --bl5: #e8f2f8;
-  --bl6: #294dd1;
-
-  /* Gold */
-  --gd1: #b89050;
-  --gd2: #c5a86a;
-  --gd3: #d8c490;
-  --gd4: #ede4c0;
+  --bl6: #7a99cf;    /* ヒヤシンスブルー　*//* #6495ed;*/
+  --bl7: #355bcd;
+  --bl8: #243f7f;
+  --bl9: #6f8fcb;    /* インクブルー*/
 
   /* Neutral */
-  --ivory:    #faf6ef;
-  --parch:    #f4edd8;
-  --warm:     #e8dfc8;
-  --txt0:     #2e2420;
-  --txt1:     #5a4a42;
-  --txt2:     #9a8880;
-  --txt3:     #c8b8b0;
-  --wh1:      #fff;
+  --ivory: #faf6ef;
+  --txt0:  #8f3f7d;
+  --txt1:  #5a4a42;
+  --txt2:  #86766f;
+  --txt3:  #000000; /*#7b5544*/
+  --txt4:  #a1a1a1;
+
+  --wh1:   #fff;
+
+  /* Font */
+  --font-main: 'Noto Serif JP';
+  --font-eyebrow: 'Homemade Apple', cursive;
+  --font-maintitle: 'Homemade Apple', cursive;
+  --font-sec-en: 'Playfair Display', serif;
+  --font-sec-ja: 'Playfair Display', serif;
+  --font-note: 'Playfair Display', serif;
+  --font-number: 'Playfair Display', serif;
+  --font-en:'Playfair Display', serif;
+  --font-formlabel: 'Playfair Display', serif;
+  --font-placeholder: 'Playfair Display', serif;
+  --font-sign: 'Playfair Display', serif;
+
+
 
   /* Layout */
   --card-max: 440px;
@@ -54,10 +66,7 @@ body {
   font-family: 'Noto Serif JP', 'IM Fell DW Pica', serif;
   background-image: url("images/body.jpeg");
   background-size: 137px 130px;
-  
-  color: var(--txt0);
-}
-
+  }
 
 /* ── Card Wrapper — 縦中央寄せ ── */
 .card-wrapper {
@@ -94,109 +103,115 @@ body {
 
 /* ── Card Inner ── */
 .card-inner {
-  padding: 100px 20px;
+  padding: 84px 20px 90px;
 }
 
-
-/* ── ピンクセクション ── */
-/*.pink-section{
-  position: relative;
-
-  padding: 40px 20px 36px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #d7b0ba 0%,
-      #e7c8d0 100%
-    );
-
-  border-radius: 180px 180px 0px 0px ;
-
-  overflow: hidden;
-
-  isolation: isolate;
-}
-
-/* 背面画像 */
-/*.pink-section::before{
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background-image: url("images/header-image.jpeg");
-  background-size: cover;
-  background-position: center;
-
-  opacity: 0.35;
-
-  z-index: -1;
-}
 
 /* ── ヘッダー ── */
 .page-header {
   text-align: center;
-  padding: 28px 8px 20px;
+  padding: 28px 8px ;
   animation: fadeUp 0.8s 0.4s var(--ease) both;
 }
 
 .eyebrow {
-  font-family: 'IM Fell DW Pica', serif;
+  font-family: var(--font-eyebrow);
   font-style: italic;
-  font-size: 0.72rem;
+  font-size: 9px;
   letter-spacing: 0.16em;
-  color: var(--txt2);
-  margin-bottom: 10px;
-}
-
-.header-ornament {
-  font-size: 2rem;
-  color: var(--wh1);
-  line-height: 1;
-  margin-bottom: 10px;
-  animation: floatOrn 4s ease-in-out infinite;
-}
-@keyframes floatOrn {
-  0%,100% { transform: translateY(0); }
-  50%      { transform: translateY(-4px); }
+  color: var(--txt3);
+  margin-bottom: 60px;
 }
 
 .main-title {
-  font-family: 'Fredoka', serif;
+  font-family: var(--font-maintitle);
   font-weight: 400;
-  font-size: clamp(1.8rem, 6vw, 2.0rem);
-  line-height: 1.15;
+  font-size: 33px;
+  line-height: 1.3;
   color: var(--bl6);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   margin-bottom: 12px;
-  text-transform: uppercase;
 }
 
-.header-sub {
-  font-size: 0.75rem;
-  color: var(--txt2);
-  letter-spacing: 0.16em;
-  margin-bottom: 18px;
+.date-area {
+  margin: 24px;
+  text-align: center;
+  color: var(--bl6);
 }
 
+/* 曜日 */
+.weekday-arc {
+  position: relative;
+  width: 360px;
+  height: 70px;
+  margin: 0 auto;
 
-/* ゴールドルール */
-.gold-rule {
-  display: flex;
+  left: -18px;
+}
+
+.weekday-arc span {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  font-size: 15px;
+  font-family: var(--font-en);
+  letter-spacing: 1px;
+  transform-origin: center 42px;
+  transform:
+    rotate(calc(var(--i) * 20deg))
+    translateY(-15px)
+}
+
+/* 横並び */
+.date-row{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   gap: 10px;
-  justify-content: center;
 }
-.rule-line {
+
+.month-text {
+  font-size:20px;
+  font-family: var(--font-en);
+  letter-spacing: 0.04em;
+  transform: translateX(2px);
+}
+
+.day-text {
+  font-size: 40px;
+  font-family: var(--font-en);
+  letter-spacing: 0.1em;
+}
+
+.time-text {
+  font-size: 17px;
+  font-family: var(--font-en);
+  letter-spacing: 0.12em;
+  margin-top: 4px;
+}
+
+.line {
   display: block;
-  width: 64px;
+  width: 82px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--wh1), transparent);
+  background: linear-gradient(90deg, transparent, var(--bl6), transparent);
+  margin: 7px auto 7px;
 }
-.rule-diamond {
-  color: var(--wh1);
-  font-size: 0.5rem;
+
+.year-text {
+  font-size: 17px;
+  font-family: var(--font-en);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.dot-line{
+  color: var(--bl6);
+  text-align: center;
+  padding: 30px 0px 30px;
 }
 
 /* ── Section Title ── */
@@ -204,32 +219,34 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .sec-en {
   display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: clamp(1.5rem, 5vw, 1.7rem);
-  letter-spacing: 0.22em;
-  color: var(--txt0);
+  font-family: var(--font-sec-en);
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.12em;
+  color: var(--bl6);
 }
+
 .sec-ja {
   display: block;
+  font-family: var(--font-sec-ja);
   font-size: 0.6rem;
   letter-spacing: 0.18em;
-  color: var(--txt3);
-  margin-top: 3px;
+  color: var(--bl6);
 }
 
 /* ── RSVP Section ── */
 .rsvp-section {
-  padding: 20px 0 8px;
   animation: fadeUp 0.8s 0.5s var(--ease) both;
 }
 
 .rsvp-note {
   text-align: center;
   font-size: 0.82rem;
-  color: var(--txt1);
+  font-family: var(--font-note);
+  color: var(--txt3);
   letter-spacing: 0.1em;
   line-height: 2;
   margin-bottom: 14px;
@@ -240,21 +257,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 20px;
-  margin-bottom: 28px;
+  padding: 10px;
   gap: 3px;
 }
-.dl-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  color: var(--txt3);
-  text-transform: uppercase;
-}
+
 .dl-date {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.22rem;
-  font-weight: 600;
-  color: var(--pk1);
+  font-family: var(--font-number);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--txt3);
   letter-spacing: 0.12em;
 }
 
@@ -263,7 +274,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 40px 0px;
+  padding: 20px;
 }
 
 /* フォームブロック */
@@ -276,9 +287,9 @@ body {
 /* フォームラベル */
 .fl {
   font-size: 0.72rem;
+  font-family: var(--font-formlabel);
   letter-spacing: 0.18em;
-  color: var(--txt2);
-  text-transform: uppercase;
+  color: var(--bl6);
   display: flex;
   align-items: center;
   gap: 7px;
@@ -287,21 +298,21 @@ body {
 /* バッジ */
 .req {
   font-size: 0.6rem;
-  background: var(--pk2);
+  background: var(--bl6);
   color: #fff;
   padding: 1px 6px;
   border-radius: 99px;
   letter-spacing: 0.04em;
-  text-transform: none;
+  opacity: 85%;
 }
 .opt {
   font-size: 0.6rem;
-  background: var(--bl2);
+  background: var(--bl6);
   color: #fff;
   padding: 1px 6px;
   border-radius: 99px;
   letter-spacing: 0.04em;
-  text-transform: none;
+  opacity: 85%;
 }
 
 /* Input共通 */
@@ -310,11 +321,11 @@ input[type="tel"],
 textarea {
   width: 100%;
   padding: 11px 14px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 0.88rem;
-  color: var(--txt0);
+  color: var(--txt3);
   background: rgba(255,255,255,0.78);
-  border: 1px solid var(--pk4);
+  border: 1px solid var(--bl6);
   border-radius: 6px;
   outline: none;
   transition: border-color 0.22s var(--ease), box-shadow 0.22s var(--ease), background 0.22s var(--ease);
@@ -322,11 +333,12 @@ textarea {
   -webkit-appearance: none;
 }
 input::placeholder, textarea::placeholder {
-  color: var(--txt3);
-  font-style: italic;
+  color: var(--txt4);
+  font-family: var(--font-placeholder);
 }
+
 input:focus, textarea:focus {
-  border-color: var(--pk2);
+  border-color: var(--bl6);
   background: rgba(255,255,255,0.96);
   box-shadow: 0 0 0 3px rgba(192,154,168,0.18);
 }
@@ -343,7 +355,7 @@ textarea {
   gap: 10px;
 }
 .nc { display: flex; flex-direction: column; gap: 4px; }
-.nh { font-size: 0.65rem; color: var(--txt3); letter-spacing: 0.12em; }
+.nh { font-size: 0.65rem; color: var(--bl6); letter-spacing: 0.12em; }
 
 /* ── 出欠カード ── */
 .attend-cards {
@@ -369,16 +381,16 @@ textarea {
   justify-content: center;
 }
 .ac:hover .ac-body {
-  border-color: var(--pk2);
+  border-color: var(--bl6);
   background: var(--pk5);
 }
 .ac input:checked + .ac-body {
-  border-color: var(--pk1);
+  border-color: var(--bl6);
   background: linear-gradient(135deg, var(--pk5) 0%, #fff 100%);
   box-shadow: 0 2px 12px rgba(160,96,112,0.14);
 }
 .ac-emoji { font-size: 1.35rem; line-height: 1; }
-.ac-text  { font-size: 0.73rem; color: var(--txt1); letter-spacing: 0.06em; line-height: 1.5; }
+.ac-text  { font-size: 0.73rem; color: var(--txt3); letter-spacing: 0.06em; line-height: 1.5; }
 
 /* ── アレルギー ── */
 .radio-stack { display: flex; flex-direction: column; gap: 9px; }
@@ -386,12 +398,12 @@ textarea {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 0.85rem;
-  color: var(--txt1);
+  font-size: 12px;
+  color: var(--txt3);
   cursor: pointer;
 }
 .rl input[type="radio"] {
-  accent-color: var(--pk1);
+  accent-color: var(--bl9);
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -409,24 +421,42 @@ textarea {
   margin-top: 8px;
 }
 
+/* ── 交通手段詳細 ── */
+.transport-wrap { 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease), opacity 0.3s var(--ease);
+  opacity: 0;
+}
+.transport-wrap.open {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+.transport-note {
+  font-size: 10px;
+  padding-left: 10px;
+  color: var(--txt3);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
 /* ── 漢字署名 ── */
 .couple-sig {
   text-align: center;
   padding: 20px 0 4px;
-  border-top: 1px dashed var(--gd4);
   margin-top: 8px;
 }
-.sig-orn {
-  font-size: 1.3rem;
-  color: var(--gd2);
-  margin-bottom: 8px;
-}
+
 .sig-name {
-  font-family: 'Noto Serif JP', serif;
+  font-family: var(--font-sign);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 0.7rem;
+  line-height: 2.0;
   letter-spacing: 0.22em;
-  color: var(--txt1);
+  color: var(--txt3);
 }
 
 /* ── 送信ボタン ── */
@@ -435,14 +465,14 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 13px 44px;
-  background: linear-gradient(135deg, var(--pk2) 0%, var(--pk1) 100%);
+  padding: 12px 38px;
+  background-color: var(--bl6);
   color: #fff;
   border: none;
   border-radius: 99px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
-  letter-spacing: 0.45em;
+  letter-spacing: 0.28em;
   cursor: pointer;
   box-shadow:
     0 4px 16px rgba(160,96,112,0.28),
@@ -466,81 +496,71 @@ textarea {
 .btn-send:hover::before { opacity: 1; }
 .btn-send:active { transform: translateY(0); }
 
-/* ── 区切り ── */
-.sep {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 28px 0;
-  justify-content: center;
-}
-.sep-line {
-  display: block;
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--bl3), transparent);
-}
-.sep-flower { color: var(--bl2); font-size: 0.9rem; opacity: 0.75; }
-
 /* ── ACCESS ── */
-.access-section { animation: fadeUp 0.8s 0.6s var(--ease) both; }
-
-.venue-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(204,224,238,0.28) 100%);
-  border: 1px solid var(--bl4);
-  border-radius: 12px;
-  padding: 24px 20px;
-  margin-bottom: 16px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.venue-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 80% 20%, rgba(170,196,214,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.teapot {
-  margin: 0 auto 12px;
-  opacity: 0.85;
-}
+.access-section { 
+  margin: 20px;
+  animation: fadeUp 0.8s 0.6s var(--ease) both; }
 
 .venue-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: 1.15rem;
+  font-family: var(--font-en);
+  font-weight: 400;
+  font-size: 17px;
   letter-spacing: 0.1em;
-  color: var(--bl1);
+  color: var(--bl6);
   margin-bottom: 4px;
+  text-align: center;
 }
 .venue-addr {
-  font-size: 0.78rem;
-  color: var(--txt2);
+  font-size: 10px;
+  text-align: center;
+  color: var(--txt3);
   letter-spacing: 0.1em;
-  margin-bottom: 18px;
-  padding-bottom: 16px;
-  border-bottom: 1px dashed var(--bl4);
+  line-height: 1.7;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed var(--bl6);
+  margin: 0px 40px 0px 40px;
 }
 
-.access-list { display: flex; flex-direction: column; gap: 14px; text-align: left; }
-.ai { display: flex; align-items: flex-start; gap: 12px; }
-.ai-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
-.ai-head { font-size: 0.72rem; letter-spacing: 0.15em; color: var(--bl1); margin-bottom: 3px; text-transform: uppercase; }
-.ai-body { font-size: 0.82rem; color: var(--txt1); line-height: 1.85; letter-spacing: 0.05em; }
+.access-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 14px; 
+  text-align: left; 
+  position: relative;
+  left: 50px;
+  margin: 30px 0px 30px;
+}
+
+.ai { 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 12px; 
+}
+
+.ai-head { 
+  font-size: 15px; 
+  letter-spacing: 0.15em; 
+  color: var(--bl6); 
+  margin-bottom: 3px; 
+}
+.ai-body { 
+  font-size: 10px; 
+  color: var(--txt3); 
+  line-height: 1.85; 
+  letter-spacing: 0.05em; 
+}
 
 /* ── Map ── */
 .map-frame {
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--bl4);
+  border: 1px solid var(--pk4);
   box-shadow: 0 4px 16px rgba(90,112,144,0.1);
 }
 .map-frame iframe {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: 230px;
   border: none;
 }
@@ -550,10 +570,10 @@ textarea {
   text-align: center;
   padding: 20px 0 8px;
 }
-.footer-orn { font-size: 1.1rem; color: var(--gd2); margin-bottom: 6px; }
+
 .page-footer p {
   font-size: 0.68rem;
-  color: var(--txt3);
+  color: var(--bl6);
   letter-spacing: 0.16em;
 }
 
@@ -577,7 +597,7 @@ textarea {
 .success-msg p {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
-  color: var(--pk1);
+  color: var(--pk1) ;
   letter-spacing: 0.1em;
   line-height: 2;
 }

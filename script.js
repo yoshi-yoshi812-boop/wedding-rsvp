@@ -20,6 +20,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── 交通手段詳細 表示切り替え ──
+  const transportRadios = document.querySelectorAll('input[name="transport"]');
+  const transportWrap   = document.getElementById('transportWrap');
+
+  transportRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === '公共交通機関') {
+        transportWrap.classList.add('open');
+
+    } else {
+
+        transportWrap.classList.remove('open');
+
+        document.querySelector(
+            'input[name="taxi"][value="タクシー利用しない"]'
+        ).checked = true;
+
+        taxiDetailWrap.classList.remove('open');
+      }
+    });
+  });
+
+  // ── 同行者詳細 表示切り替え ──
+  const taxiRadios = document.querySelectorAll('input[name="taxi"]');
+  const taxiDetailWrap   = document.getElementById('taxiDetailWrap');
+
+  taxiRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === 'タクシー利用する') {
+        taxiDetailWrap.classList.add('open');
+      } else {
+        taxiDetailWrap.classList.remove('open');
+      }
+    });
+  });
+
   // ── Formspree 非同期送信 ──
   const form = document.getElementById('rsvpForm');
   if (!form) return;
@@ -48,10 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const msg = document.createElement('div');
         msg.className = 'success-msg show';
         msg.innerHTML = `
-          <div style="font-size:2rem;color:#c5a86a;margin-bottom:12px;">✦</div>
-          <p>ご回答ありがとうございます。<br>
-          心よりお待ち申し上げております。</p>
-          <p style="margin-top:14px;font-size:0.8rem;color:#9a8880;letter-spacing:0.12em;">
+          <p style="font-family: 'Playfair Display', serif;font-size:15px;color:#9a8880;letter-spacing:0.12em;">
+            ご回答ありがとうございます。<br>
+            大変お手数ですが当日は11:20までに<br>
+            ご来場いただけますようお願いいたします。<br>
+            お会いできることを楽しみにしております!</p>
+          <p style="margin-top:14px;font-family: 'Playfair Display', serif;font-size:10px;color:#9a8880;letter-spacing:0.12em;">
             Yoshiki &amp; Kasumi
           </p>
         `;
