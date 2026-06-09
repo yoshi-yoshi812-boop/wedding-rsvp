@@ -142,11 +142,11 @@ body {
 /* 曜日 */
 .weekday-arc {
   position: relative;
-  width: 360px;
+  width: 320px;
   height: 70px;
   margin: 0 auto;
 
-  left: -18px;
+  left: 0px;
 }
 
 .weekday-arc span {
@@ -191,6 +191,7 @@ body {
   font-family: var(--font-en);
   letter-spacing: 0.12em;
   margin-top: 4px;
+  white-space: nowrap;
 }
 
 .line {
