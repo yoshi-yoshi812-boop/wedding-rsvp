@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Amatic+SC:wght@400;700&family=BIZ+UDPMincho&family=Bad+Script&family=Cookie&family=Courgette&family=Damion&family=Grand+Hotel&family=Homemade+Apple&family=Miss+Fajardose&family=Mochiy+Pop+One&family=Mrs+Saint+Delafield&family=Pacifico&family=Parisienne&family=Pattaya&family=Pinyon+Script&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=Shippori+Mincho&family=Style+Script&family=Tangerine:wght@400;700&family=Walter+Turncoat&family=Yuji+Syuku&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
 
 </head>
 <body>
+
 
 <!-- メインカード -->
 <div class="card-wrapper">
@@ -20,73 +22,98 @@
     <div class="card-inner">
 
         <!-- ヘッダー -->
-        
-        <div class="pink-section">
+        <div class="top">
             <header class="page-header">
                 <p class="eyebrow">— You are cordially invited —</p>
                 <h1 class="main-title">Welcome to Our<br>Wedding</h1>
-                
-                <div class="date-area">
-                    <div class="weekday-arc">
-                        <span style="--i:-2.5">S</span>
-                        <span style="--i:-1.5">U</span>
-                        <span style="--i:-0.5">N</span>
-                        <span style="--i:0.5">D</span>
-                        <span style="--i:1.5">A</span>
-                        <span style="--i:2.5">Y</span>
-                    </div>
-
-                    <div class="date-row">
-                        <div class="month-item">
-                            <span class="line"></span>
-                            <span class="month-text">October</span>
-                            <span class="line"></span>
-                        </div>
-
-                        <div class="day-item">
-                            <span class="day-text">25</span>
-                        </div>
-
-                        <div class="time-item">
-                            <span class="line"></span>
-                            <span class="time-text">11:30 AM</span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-
-                    <div class="year">
-                        <span class="year-text">2026</span>
-                    </div>
-                </div>
             </header>
-
-            <!-- 区切り線 -->
-            <div class="dot-line">
-                <p>●　●　●　●　●　●　●　●　●　●</p> 
-            </div> 
-
-            <!-- ===== RSVP ===== -->
-            <section class="rsvp-section">
-                <h2 class="sec-title">
-                    <span class="sec-en">RSVP</span>
-                    <span class="sec-ja">ご出欠のご返答</span>
-                </h2>
-
-                <p class="rsvp-note">
-                    お手数ではございますが<br>
-                    下記期限までにご回答くださいませ
-                </p>
-
-                <div class="deadline">
-                    <span class="dl-date">2026 / 08 / 31</span>
-                </div>
-            </section>
         </div>
+        
+        <div style="display:flex; justify-content:center;">
+            <div style="background:#fff; width:340px; height:340px;">
+            </div>
+        </div>        
+
+        <!-- 日付画像 
+        <div class="date-area">
+            <img
+                src="images/date-image3.png" 
+                alt="Wedding Date" 
+                class="date-image">
+        </div>
+        -->
+
+
+        <!-- 区切り線 -->
+        <div class="dot-line reveal">
+            <p>●　●　●　●　●　●　●　●　●　●</p> 
+        </div> 
+
+
+        <!-- ===== ACCESS ===== -->
+        <section class="access-section reveal reveal-up">
+            <h2 class="sec-title reveal">
+                <span class="sec-en">ACCESS</span>
+                <span class="sec-ja">会場へのご案内</span>
+            </h2>
+
+            <div class="venue-card reveal">
+
+                <p class="venue-name">RESTAURANT AMONDANS</p>
+                <p class="venue-addr">愛知県豊橋市柱八番町99-1<br>
+                    TEL: 0532-38-5700<br>
+                    <a href="https://amondans.jp/" target="_blank" rel="noopener noreferrer">https://www.amondans.com/</a>  </p>
+
+                <div class="access-list">
+                    <div class="ai reveal">
+                        <div>
+                            <p class="ai-head">お車でお越しの方</p>
+                            <p class="ai-body">来客用駐車場が20台ございます</p>
+                        </div>
+                    </div>
+                    <div class="ai reveal">
+                        <div>
+                            <p class="ai-head">電車でお越しの方</p>
+                            <p class="ai-body">名鉄・JR「豊橋駅」よりタクシー約10分<br>渥美線「愛知大学前駅」より徒歩約15分</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-frame reveal reveal-right">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.503952555852!2d137.378962!3d34.74289600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004d22498369937%3A0x995d873274139854!2z44Ki44Oi44Oz44OA44Oz!5e0!3m2!1sja!2sjp!4v1775807881953!5m2!1sja!2sjp"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="会場地図">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- 区切り線 -->
+        <div class="dot-line reveal">
+            <p>●　●　●　●　●　●　●　●　●　●</p> 
+        </div> 
+
+        <!-- ===== RSVP ===== -->
+        <section class="rsvp-section reveal reveal-up">
+            <h2 class="sec-title reveal">
+                <span class="sec-en">RSVP</span>
+                <span class="sec-ja">ご出欠のご返答</span>
+            </h2>
+
+            <p class="rsvp-note reveal">
+                お手数ではございますが<br>
+                下記期限までにご回答くださいませ
+            </p>
+
+            <div class="deadline reveal">
+                <span class="dl-date">2026 / 08 / 31</span>
+            </div>
+        </section>
 
         <form class="rsvp-form" id="rsvpForm" action="https://formspree.io/f/xlgzagnw" method="POST">
 
             <!-- 出欠カード -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">ご出席 <span class="req">必須</span></div>
                 <div class="attend-cards">
                     <label class="ac">
@@ -107,7 +134,7 @@
             </div>
 
             <!-- お名前 -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">お名前 <span class="req">必須</span></div>
                 <div class="name-row">
                     <div class="nc"><span class="nh">姓</span><input type="text" name="lastName" required autocomplete="family-name"></div>
@@ -116,7 +143,7 @@
             </div>
 
             <!-- フリガナ -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">フリガナ <span class="req">必須</span></div>
                 <div class="name-row">
                     <div class="nc"><span class="nh">セイ</span><input type="text" name="lastKana" required></div>
@@ -125,25 +152,25 @@
             </div>
 
             <!-- 郵便番号 -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">郵便番号 <span class="req">必須</span></div>
                 <input type="text" name="postcode" required inputmode="numeric" maxlength="8">
             </div>
 
             <!-- 住所 -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">ご住所 <span class="req">必須</span></div>
                 <input type="text" name="address"  required autocomplete="street-address">
             </div>
 
             <!-- 電話番号 -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">お電話番号 <span class="req">必須</span></div>
                 <input type="tel" name="phone" required inputmode="tel">
             </div>
 
             <!-- 交通手段 -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">交通手段 <span class="req">必須</span></div>
                 <div class="radio-stack">
                     <label class="rl"><input type="radio" name="transport" value="自家用車" checked><span>自家用車 (乗り合わせも含む)</span></label>
@@ -160,9 +187,8 @@
                 </div>
             </div>
  
-
             <!-- アレルギー -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">食物アレルギー</div>
                 <div class="radio-stack">
                     <label class="rl"><input type="radio" name="allergy" value="ございません" checked><span>ございません</span></label>
@@ -174,18 +200,22 @@
             </div>
 
             <!-- メッセージ -->
-            <div class="fb">
+            <div class="fb reveal">
                 <div class="fl">備考 <span class="opt">任意</span></div>
-                <textarea name="message" rows="4"></textarea>
+                <textarea name="message" rows="3"></textarea>
+                <p class="request-text reveal">
+                    当日は11時20分までにお越しくださいますよう<br>
+                    お願いいたします。
+                </p>
             </div>
 
             <!-- 漢字署名 -->
-            <div class="couple-sig">
-                <p class="sig-name">2026年7月吉日<br>川嶋　祥紀　<br>川嶋　かすみ<br>(旧姓：藤本)</p>
+            <div class="couple-sig reveal">
+                <p class="sig-name">2026年7月吉日<br>川嶋　祥紀　<br>藤本　かすみ</p>
             </div>
 
             <!-- 送信ボタン -->
-            <div class="submit-wrap">
+            <div class="submit-wrap reveal">
                 <button type="submit" class="btn-send">
                         送　信 
                 </button>
@@ -193,52 +223,8 @@
 
         </form>
 
-        <!-- 区切り線 -->
-        <div class="dot-line">
-            <p>●　●　●　●　●　●　●　●　●　●</p> 
-        </div> 
-
-
-        <!-- ===== ACCESS ===== -->
-        <section class="access-section">
-            <h2 class="sec-title">
-                <span class="sec-en">ACCESS</span>
-                <span class="sec-ja">会場へのご案内</span>
-            </h2>
-
-            <div class="venue-card">
-
-                <p class="venue-name">RESTAURANT AMONDANS</p>
-                <p class="venue-addr">愛知県豊橋市柱八番町99-1<br>
-                    TEL: 0532-38-5700<br>
-                    <a href="https://amondans.jp/" target="_blank" rel="noopener noreferrer">https://www.amondans.com/</a>  </p>
-
-                <div class="access-list">
-                    <div class="ai">
-                        <div>
-                            <p class="ai-head">お車でお越しの方</p>
-                            <p class="ai-body">来客用駐車場が20台ございます</p>
-                        </div>
-                    </div>
-                    <div class="ai">
-                        <div>
-                            <p class="ai-head">電車でお越しの方</p>
-                            <p class="ai-body">名鉄・JR「豊橋駅」よりタクシー約10分<br>渥美線「愛知大学前駅」より徒歩約15分</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-frame">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.503952555852!2d137.378962!3d34.74289600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004d22498369937%3A0x995d873274139854!2z44Ki44Oi44Oz44OA44Oz!5e0!3m2!1sja!2sjp!4v1775807881953!5m2!1sja!2sjp"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="会場地図">
-                </iframe>
-            </div>
-        </section>
-
-        <footer class="page-footer">
-            <p> Wedding RSVP 2026</p>
+        <footer class="page-footer reveal">
+            <p> ©︎Wedding RSVP 2026</p>
         </footer>
 
     </div><!-- /card-inner -->

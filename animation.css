@@ -1,0 +1,141 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    animation: 
+    cardIntro 5s 
+    cubic-bezier(.22,1,.36,1)
+    both;
+}
+
+@keyframes cardIntro{
+    from{
+        opacity:0;
+        filter:blur(18px);
+    }
+    to{
+        opacity:1;
+        filter:blur(0);
+    }
+}
+
+body{
+    animation: bodyFade 2.6s ease both;
+}
+
+@keyframes bodyFade{
+    from{
+        opacity:.88;
+        filter:
+            brightness(.92);
+    }
+    to{
+        opacity:1;
+        filter:
+            brightness(1);
+    }
+}
+
+.page-header{
+    opacity:1;
+}
+
+.eyebrow{
+    opacity:0;
+    animation:
+    eyebrowFade
+    1.5s
+    ease
+    2s
+    forwards;
+}
+
+@keyframes eyebrowFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+
+}
+.main-title{
+    opacity:0;
+    animation:
+    titleFade 1.8s ease
+    3s
+    forwards;
+}
+
+@keyframes titleFade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+transform:none;
+}
+}
+
+.date-area{
+    opacity:0;
+    animation:
+    dateFade 1.8s ease
+    4s
+    forwards;
+}
+
+@keyframes dateFade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.rsvp-section {
+  animation: fadeUp 0.8s 0.5s var(--ease) both;
+  transition-delay: 5s;
+}
+
+.reveal{
+    opacity:0;
+    transform:
+        translateY(60px)
+        scale(.97);
+    transition:
+        opacity 3s ease,
+        transform 3s cubic-bezier(.16,1,.3,1),
+        filter 3s ease;
+}
+
+.reveal-left{
+    transform:
+        translateX(-70px)
+        translateZ(-120px)
+        scale(.95);
+}
+
+.reveal-right{
+    transform:
+        translateX(70px)
+        translateZ(-120px)
+        scale(.95);
+}
+
+.reveal-up{
+    transform:
+        translateY(45px)
+        scale(.96);
+}
+
+.reveal.is-visible{
+
+opacity:1;
+transform:none;
+
+}
+
