@@ -67,6 +67,11 @@ img, svg { display: block; max-width: 100%; }
 body {
   font-family: 'Noto Serif JP', 'IM Fell DW Pica', serif;
   background-image: url("images/body2.png");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: auto;
+
+  min-height: 100vh;
   }
 
 /* ── Card Wrapper — 縦中央寄せ ── */
