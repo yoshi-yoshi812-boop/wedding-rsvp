@@ -132,8 +132,113 @@ body {
   letter-spacing: 0.08em;
 }
 
-.date-area {
-  text-align: center;
+/* -------------------------------
+   DATE IMAGE
+-------------------------------- */
+
+.date-area{
+
+    display:grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-items:center;
+    align-items:center;
+
+    width:340px;
+
+    margin:40px auto 50px;
+
+}
+
+
+/* 共通 */
+
+.date-image{
+
+    width:340px;
+    height:340px;
+
+    display:block;
+
+}
+
+
+/* ---------- 配置 ---------- */
+
+/* 上 */
+
+.sunday{
+
+    grid-column:2;
+
+    margin-bottom:-240px;
+
+}
+
+
+/* 左 */
+
+.october{
+
+    grid-column:1;
+    grid-row:2;
+
+    margin-right:-210px;
+    margin-top:-140px;
+
+}
+
+
+/* 真ん中 */
+
+.day25{
+
+    grid-column:2;
+    grid-row:2;
+
+    z-index:2;
+
+    margin-top:-120px;
+
+}
+
+
+/* 右 */
+
+.time{
+
+    grid-column:3;
+    grid-row:2;
+
+    margin-left:-210px;
+    margin-top:-140px;
+
+}
+
+
+/* 下 */
+
+.year{
+
+    grid-column:2;
+    grid-row:3;
+
+    margin-top:-240px;
+    margin-bottom:-200px;
+
+}
+
+
+/* 一番下 */
+
+.cake{
+
+    grid-column:2;
+    grid-row:4;
+
+    margin-top:-250px;
+
 }
 
 .date-image {
