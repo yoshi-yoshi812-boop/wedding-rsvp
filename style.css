@@ -132,29 +132,16 @@ body {
   letter-spacing: 0.08em;
 }
 
-/* -------------------------------
-   DATE IMAGE
--------------------------------- */
-
 .date-area{
-
-    display:grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-
-    justify-items:center;
-    align-items:center;
-
+    position:relative;
     width:340px;
-
-    margin:40px auto 50px;
-
+    height:340px;
+    margin: 0 auto;
 }
 
-
-/* 共通 */
-
 .date-image{
+
+    position:absolute;
 
     width:340px;
     height:340px;
@@ -163,91 +150,37 @@ body {
 
 }
 
-
-/* ---------- 配置 ---------- */
-
-/* 上 */
-
 .sunday{
-
-    grid-column:2;
-
-    margin-bottom:-240px;
-
+    top:-140px;
+    left:0;
 }
-
-
-/* 左 */
 
 .october{
-
-    grid-column:1;
-    grid-row:2;
-
-    margin-right:-210px;
-    margin-top:-140px;
-
+    top:70px;
+    left:-185px;
 }
-
-
-/* 真ん中 */
 
 .day25{
-
-    grid-column:2;
-    grid-row:2;
-
-    z-index:2;
-
-    margin-top:-120px;
-
+    top:70px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
-
-/* 右 */
 
 .time{
-
-    grid-column:3;
-    grid-row:2;
-
-    margin-left:-210px;
-    margin-top:-140px;
-
+    top:70px;
+    left:190px;
 }
-
-
-/* 下 */
 
 .year{
-
-    grid-column:2;
-    grid-row:3;
-
-    margin-top:-240px;
-    margin-bottom:-200px;
-
+    top:290px;
+    left:0;
+    bottom: 10px;
 }
-
-
-/* 一番下 */
 
 .cake{
-
-    grid-column:2;
-    grid-row:4;
-
-    margin-top:-250px;
-
+    top:470px;
+    left:0;
 }
-
-.date-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 400px;
-  height: auto;
-}
-
 
 .dot-line{ 
   color: var(--pk8); 
