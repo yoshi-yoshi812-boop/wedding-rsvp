@@ -12,24 +12,32 @@
   --pk2: #c09aa8;
   --pk3: #d8bcc6;
   --pk4: #ecd8de;
-  --pk5: #f7edf0;
-  --pk6: pink; /* before */
-  --pk7: #dfb2b5;
-  --pk8: #67292a;
+  --pk5: #f4efe5;
+  --pk6: pink;    /* before */
+  --pk7: #dfb2b5; /* before2 */
+  --pk8: #990000;
+  --pk9:#71170c;
 
   /* Dusty Blue */
   --bl1: #5a7090;
   --bl2: #88a8c0;
   --bl3: #aac4d6;
-  --bl4: #cce0ee;
-  --bl5: #e8f2f8;
+  --bl4: #b8cee8;
+  --bl5: #c5e2e2;
   --bl6: #7a99cf;    /* before */
   --bl7: #355bcd;
-  --bl8: #243f7f;
-  --bl9: #6f8fcb;    /* インクブルー*/
+  --bl8: #243f7f;    /* before2 */
+  --bl9: #b1c6df;    
+
+  /* Dusty Green */
+  --gr1: #c8d1cb;
+  --gr2: #68736d;
+  --gr3: #76807b;
+  --gr4: #86989d;
+  --gr5: #c5e2e2;
 
   /* Neutral */
-  --ivory: #faf6ef;
+  --ivory: #f8f4e6;
   --txt0:  #8f3f7d;
   --txt1:  #5a4a42;
   --txt2:  #86766f;
@@ -89,7 +97,7 @@ body {
 .card {
   width: 100%;
   max-width: var(--card-max);
-  background-color: color-mix(in srgb, var(--pk7) 100%, transparent);
+  background-color: color-mix(in srgb, var(--ivory) 100%, transparent);
   border-top-left-radius: 300px;
   border-top-right-radius: 300px;
   box-shadow:
@@ -119,16 +127,16 @@ body {
   font-style: italic;
   font-size: 9px;
   letter-spacing: 0.16em;
-  color: var(--txt3);
+  color: var(--pk8);
   margin-bottom: 60px;
 }
 
 .main-title {
   font-family: var(--font-maintitle);
   font-weight: 400;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.3;
-  color: var(--bl8);
+  color: var(--pk8);
   letter-spacing: 0.08em;
 }
 
@@ -136,7 +144,7 @@ body {
     position:relative;
     width:340px;
     height:340px;
-    margin: 0 auto;
+    margin: -100px 0px 0px 0px;
 }
 
 .date-image{
@@ -201,7 +209,7 @@ body {
   font-weight: 400;
   font-size: 30px;
   letter-spacing: 0.12em;
-  color: var(--bl8);
+  color: var(--bl5);
 }
 
 .sec-ja {
@@ -209,7 +217,7 @@ body {
   font-family: var(--font-sec-ja);
   font-size: 0.6rem;
   letter-spacing: 0.18em;
-  color: var(--bl8);
+  color: var(--bl5);
 }
 
 /* ── ACCESS ── */
@@ -222,7 +230,7 @@ body {
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 0.1em;
-  color: var(--bl8);
+  color: var(--gr2 );
   margin-bottom: 4px;
   text-align: center;
 }
@@ -233,7 +241,7 @@ body {
   letter-spacing: 0.1em;
   line-height: 1.7;
   padding-bottom: 30px;
-  border-bottom: 1px dashed var(--bl8);
+  border-bottom: 1px dashed var(--gr2);
   margin: 0px 40px 0px 40px;
 }
 
@@ -256,7 +264,7 @@ body {
 .ai-head { 
   font-size: 15px; 
   letter-spacing: 0.15em; 
-  color: var(--bl8); 
+  color: var(--gr2); 
   margin-bottom: 3px; 
 }
 .ai-body { 
@@ -271,7 +279,7 @@ body {
   margin: 0 40px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--pk4);
+  border: 1px solid var(--gr2);
   box-shadow: 0 4px 16px rgba(90,112,144,0.1);
   margin-top: 40px;
   margin-bottom: 20px;
@@ -336,7 +344,7 @@ body {
   font-size: 0.72rem;
   font-family: var(--font-formlabel);
   letter-spacing: 0.18em;
-  color: var(--bl8);
+  color: var(--pk8);
   display: flex;
   align-items: center;
   gap: 7px;
@@ -345,7 +353,7 @@ body {
 /* バッジ */
 .req {
   font-size: 0.6rem;
-  background: var(--bl8);
+  background: var(--pk8);
   color: #fff;
   padding: 1px 6px;
   border-radius: 99px;
@@ -354,7 +362,7 @@ body {
 }
 .opt {
   font-size: 0.6rem;
-  background: var(--bl8);
+  background: var(--pk8);
   color: #fff;
   padding: 1px 6px;
   border-radius: 99px;
@@ -371,8 +379,8 @@ textarea {
   font-family: 'Playfair Display', serif;
   font-size: 0.88rem;
   color: var(--txt3);
-  background: rgba(255,255,255,0.78);
-  border: 1px solid var(--bl8);
+  background: rgba(255,255,255,0.45);
+  border: 1px solid var(--pk8);
   border-radius: 6px;
   outline: none;
   transition: border-color 0.22s var(--ease), box-shadow 0.22s var(--ease), background 0.22s var(--ease);
@@ -385,7 +393,7 @@ input::placeholder, textarea::placeholder {
 }
 
 input:focus, textarea:focus {
-  border-color: var(--bl8);
+  border-color: var(--pk8);
   background: rgba(255,255,255,0.96);
   box-shadow: 0 0 0 3px rgba(192,154,168,0.18);
 }
@@ -402,7 +410,7 @@ textarea {
   gap: 10px;
 }
 .nc { display: flex; flex-direction: column; gap: 4px; }
-.nh { font-size: 0.65rem; color: var(--bl8); letter-spacing: 0.12em; }
+.nh { font-size: 0.65rem; color: var(--pk8); letter-spacing: 0.12em; }
 
 /* ── 出欠カード ── */
 .attend-cards {
@@ -418,7 +426,7 @@ textarea {
   align-items: center;
   gap: 8px;
   padding: 16px 10px;
-  border: 1.5px solid var(--pk4);
+  border: 1.5px solid var(--gr2);
   border-radius: 10px;
   background: rgba(255,255,255,0.6);
   cursor: pointer;
@@ -428,11 +436,11 @@ textarea {
   justify-content: center;
 }
 .ac:hover .ac-body {
-  border-color: var(--bl8);
+  border-color: var(--pk8);
   background: var(--pk5);
 }
 .ac input:checked + .ac-body {
-  border-color: var(--bl8);
+  border-color: var(--pk8);
   background: linear-gradient(135deg, var(--pk5) 0%, #fff 100%);
   box-shadow: 0 2px 12px rgba(160,96,112,0.14);
 }
@@ -450,7 +458,7 @@ textarea {
   cursor: pointer;
 }
 .rl input[type="radio"] {
-  accent-color: var(--bl8);
+  accent-color: var(--pk8);
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -527,7 +535,7 @@ textarea {
   align-items: center;
   gap: 12px;
   padding: 12px 38px;
-  background-color: var(--bl8);
+  background-color: var(--pk8);
   color: #fff;
   border: none;
   border-radius: 99px;
@@ -565,7 +573,7 @@ textarea {
 
 .page-footer p {
   font-size: 0.68rem;
-  color: var(--bl8);
+  color: var(--pk8);
   letter-spacing: 0.16em;
 }
 
@@ -608,4 +616,11 @@ textarea {
   .btn-send { padding: 11px 32px; letter-spacing: 0.28em; }
 }
 
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill{
+    -webkit-text-fill-color:#000;
+    -webkit-box-shadow:0 0 0 1000px #eef2ef inset;
+    box-shadow:0 0 0 1000px #eef2ef inset;
+}
