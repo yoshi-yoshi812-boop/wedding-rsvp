@@ -362,7 +362,7 @@ body {
 .rsvp-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 28px;
   padding: 20px;
 }
 
@@ -370,7 +370,7 @@ body {
 .fb {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 12px;
 }
 
 /* フォームラベル */
@@ -381,7 +381,7 @@ body {
   color: var(--pk8);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 /* バッジ */
@@ -409,7 +409,7 @@ input[type="text"],
 input[type="tel"],
 textarea {
   width: 100%;
-  padding: 11px 14px;
+  padding: 13px 16px;
   font-family: 'Playfair Display', serif;
   font-size: 0.88rem;
   color: var(--txt3);
@@ -443,7 +443,7 @@ textarea {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-.nc { display: flex; flex-direction: column; gap: 4px; }
+.nc { display: flex; flex-direction: column; gap: 0px; }
 .nh { font-size: 0.65rem; color: var(--pk8); letter-spacing: 0.12em; }
 
 /* ── 出欠カード ── */
