@@ -194,6 +194,7 @@ body {
   width: 280px;
   top: 20px;
   left: 30px;
+  margin: 0 auto;
 }
 
 .year{
@@ -225,7 +226,7 @@ body {
 }
 
 .line{
-  width: 330px;
+  width: 280px;
   height: 35px;
   margin: 0 auto 20px ;
 }
