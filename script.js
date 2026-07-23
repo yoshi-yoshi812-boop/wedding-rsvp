@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initTransportToggle();
   initScrollReveal();
   initFormSubmit();
+
+  setTimeout(() => {
+    document.body.classList.add("intro-end");
+  }, 8200);   // TeaParty終了時刻
 });
 
 /* ── アレルギー詳細 表示切り替え ── */

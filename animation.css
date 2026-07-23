@@ -239,3 +239,20 @@ transform:none;
 
 }
 
+/* ===== Intro終了まで非表示 ===== */
+
+.intro-hidden,
+.access-section,
+.rsvp-section,
+.rsvp-form,
+.page-footer{
+    display:none;
+}
+
+body.intro-end .intro-hidden,
+body.intro-end .access-section,
+body.intro-end .rsvp-section,
+body.intro-end .rsvp-form,
+body.intro-end .page-footer{
+    display:block;
+}
