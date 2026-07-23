@@ -191,7 +191,7 @@ body {
 
 .leaf{
   position: absolute;
-  width: 340px;
+  width: 330px;
   top: 20px;
 }
 
@@ -218,13 +218,13 @@ body {
 
 .teaparty{
   position: absolute;
-  width: 340px;
+  width: 330px;
   top: 15px;
   left: -10px;
 }
 
 .line{
-  width: 340px;
+  width: 330px;
   height: 35px;
   margin: 0 auto 20px ;
 }
