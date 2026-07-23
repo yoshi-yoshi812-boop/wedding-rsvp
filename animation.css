@@ -44,7 +44,7 @@ body{
     animation:
     eyebrowFade
     1.5s
-    ease
+    cubic-bezier(.22,1,.36,1)
     2s
     forwards;
 }
@@ -59,17 +59,23 @@ body{
     }
 
 }
+
 .main-title{
     opacity:0;
+    transform:translateY(15px);
+
     animation:
-    titleFade 1.8s ease
-    3s
-    forwards;
+        titleFade
+        2.8s
+        cubic-bezier(.22,1,.36,1)
+        3s
+        both;
 }
 
 @keyframes titleFade{
 from{
 opacity:0;
+transform:translateY(15px)
 }
 to{
 opacity:1;
@@ -77,24 +83,118 @@ transform:none;
 }
 }
 
-.date-area{
-    opacity:0;
-    animation:
-    dateFade 1.8s ease
-    4s
-    forwards;
+.leaf{
+
+opacity:0;
+transform:scale(.84);
+
+animation:
+leafFade
+4.2s
+cubic-bezier(.22,1,.36,1)
+3s
+forwards;
+
 }
 
-@keyframes dateFade{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:none;
-    }
+@keyframes leafFade{
+
+from{
+opacity:0;
+transform:scale(.84);
 }
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.year{
+
+opacity:0;
+transform:translateX(-30px);
+
+animation:
+dateSlide
+1.3s
+ease
+4.8s
+forwards;
+
+}
+
+.month{
+
+opacity:0;
+transform:translateX(-30px);
+
+animation:
+dateSlide
+1.3s
+ease
+5.7s
+forwards;
+
+}
+
+.day{
+
+opacity:0;
+transform:translateX(-30px);
+
+animation:
+dateSlide
+1.3s
+ease
+6.4s
+forwards;
+
+}
+
+@keyframes dateSlide{
+
+from{
+opacity:0;
+transform:translateX(-30px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+.teaparty{
+
+opacity:0;
+transform:scale(.96);
+
+animation:
+teaFade
+2s
+cubic-bezier(.22,1,.36,1)
+7.5s
+forwards;
+
+}
+
+@keyframes teaFade{
+
+from{
+opacity:0;
+transform:scale(.96);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
 
 .rsvp-section {
   animation: fadeUp 0.8s 0.5s var(--ease) both;

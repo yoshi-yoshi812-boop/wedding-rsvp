@@ -157,24 +157,24 @@ function initFormSubmit() {
 
 /* ── 送信成功メッセージの表示 ── */
 function showSuccessMessage(form) {
-  form.style.display = 'none';
 
-  const msg = document.createElement('div');
-  msg.className = 'success-msg show';
-  msg.innerHTML = `
-    <p class="success-msg-body">
-      ご回答ありがとうございます。<br>
-      大変お手数ですが当日は11:20までに<br>
-      ご来場いただけますようお願いいたします。<br>
-      お会いできることを楽しみにしております!
-    </p>
-    <p class="success-msg-sign">
-      Yoshiki &amp; Kasumi
-    </p>
-  `;
-  form.parentNode.insertBefore(msg, form);
-  msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    form.style.display = "none";
+
+    const msg = document.createElement("div");
+    msg.className = "success-msg show";
+
+    msg.innerHTML = `
+        <img src="thanks.jpg"
+             alt="Thank you"
+             class="thanks-image">
+    `;
+
+    form.parentNode.insertBefore(msg, form);
+
+    msg.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
 }
-
-
 
