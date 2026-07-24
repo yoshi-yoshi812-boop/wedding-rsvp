@@ -220,9 +220,9 @@ body {
 
 .teaparty{
   position: absolute;
-  width: 330px;
-  top: 15px;
-  left: 0px;
+  width: 325px;
+  top: 20px;
+  left: -4px;
 }
 
 .line{
@@ -454,6 +454,7 @@ textarea {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
+
 .ac input[type="radio"] { display: none; }
 
 .ac-body {
@@ -625,6 +626,7 @@ textarea {
     display:block;
     margin:auto;
 }
+
 
 
 /* ── Responsive  ── */

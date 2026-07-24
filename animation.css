@@ -239,6 +239,11 @@ transform:none;
 
 }
 
+.attendance-only{
+    transition:.35s ease;
+}
+
+
 /* ===== Intro終了まで非表示 ===== */
 
 .intro-hidden,

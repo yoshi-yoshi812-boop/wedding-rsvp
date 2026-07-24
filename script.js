@@ -7,6 +7,7 @@
    =================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAttendanceToggle();
   initAllergyToggle();
   initTransportToggle();
   initScrollReveal();
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => {
     document.body.classList.add("intro-end");
-  }, 8200);   // TeaParty終了時刻
+  }, 8200);
 });
 
 /* ── アレルギー詳細 表示切り替え ── */
@@ -30,8 +31,47 @@ function initAllergyToggle() {
   });
 }
 
+/* ── 出欠による表示切替 ── */
+function initAttendanceToggle() {
+
+  const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
+  const attendanceFields = document.getElementById("attendanceFields");
+
+  if (!attendanceFields) return;
+
+  const requiredInputs = attendanceFields.querySelectorAll("[required]");
+
+  attendanceRadios.forEach(radio => {
+
+    radio.addEventListener("change", () => {
+
+      if (radio.value === "ご欠席") {
+
+        attendanceFields.style.display = "none";
+
+        requiredInputs.forEach(input => {
+          input.required = false;
+        });
+
+      } else {
+
+        attendanceFields.style.display = "block";
+
+        requiredInputs.forEach(input => {
+          input.required = true;
+        });
+
+      }
+
+    });
+
+  });
+
+}
+
 /* ── 交通手段 / タクシー詳細 表示切り替え ── */
 function initTransportToggle() {
+  
   const transportRadios = document.querySelectorAll('input[name="transport"]');
   const transportWrap = document.getElementById('transportWrap');
   const taxiRadios = document.querySelectorAll('input[name="taxi"]');

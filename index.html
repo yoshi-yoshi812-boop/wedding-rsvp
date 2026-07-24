@@ -116,14 +116,14 @@
                 <div class="fl">ご出席 <span class="req">必須</span></div>
                 <div class="attend-cards">
                     <label class="ac">
-                        <input type="radio" name="attendance" value="喜んで出席いたします" required>
+                        <input type="radio" name="attendance" value="ご出席" required>
                         <span class="ac-body">
                             <span class="ac-emoji">🎀</span>
                             <span class="ac-text">ご出席</span>
                         </span>
                     </label>
                     <label class="ac">
-                        <input type="radio" name="attendance" value="誠に残念ながら欠席いたします">
+                        <input type="radio" name="attendance" value="ご欠席">
                         <span class="ac-body">
                             <span class="ac-emoji">🕊️</span>
                             <span class="ac-text">ご欠席</span>
@@ -132,71 +132,76 @@
                 </div>
             </div>
 
-            <!-- お名前 -->
-            <div class="fb reveal">
-                <div class="fl">お名前 <span class="req">必須</span></div>
-                <div class="name-row">
-                    <div class="nc"><span class="nh">姓</span><input type="text" name="lastName" required autocomplete="family-name"></div>
-                    <div class="nc"><span class="nh">名</span><input type="text" name="firstName" required autocomplete="given-name"></div>
-                </div>
-            </div>
-
-            <!-- フリガナ -->
-            <div class="fb reveal">
-                <div class="fl">フリガナ <span class="req">必須</span></div>
-                <div class="name-row">
-                    <div class="nc"><span class="nh">セイ</span><input type="text" name="lastKana" required></div>
-                    <div class="nc"><span class="nh">メイ</span><input type="text" name="firstKana" required></div>
-                </div>
-            </div>
-
-            <!-- 郵便番号 -->
-            <div class="fb reveal">
-                <div class="fl">郵便番号 <span class="req">必須</span></div>
-                <input type="text" name="postcode" required inputmode="numeric" maxlength="8">
-            </div>
-
-            <!-- 住所 -->
-            <div class="fb reveal">
-                <div class="fl">ご住所 <span class="req">必須</span></div>
-                <input type="text" name="address"  required autocomplete="street-address">
-            </div>
-
-            <!-- 電話番号 -->
-            <div class="fb reveal">
-                <div class="fl">お電話番号 <span class="req">必須</span></div>
-                <input type="tel" name="phone" required inputmode="tel">
-            </div>
-
-            <!-- 交通手段 -->
-            <div class="fb reveal">
-                <div class="fl">交通手段 <span class="req">必須</span></div>
-                <div class="radio-stack">
-                    <label class="rl"><input type="radio" name="transport" value="自家用車" checked><span>自家用車 (乗り合わせも含む)</span></label>
-                    <label class="rl"><input type="radio" name="transport" value="公共交通機関"><span>公共交通機関</span></label>
-                </div>
-                <div class="transport-wrap" id="transportWrap">
-                    <div class="radio-stack">
-                        <label class="rl"><input type="radio" name="taxi" value="タクシー利用しない" checked><span>タクシー利用しない</span></label>
-                        <label class="rl"><input type="radio" name="taxi" value="タクシー利用する" id="taxiYes"><span>タクシー利用する</span></label>
+            <div id="attendanceFields">
+            
+                <!-- お名前 -->
+                <div class="fb reveal">
+                    <div class="fl">お名前 <span class="req">必須</span></div>
+                    <div class="name-row">
+                        <div class="nc"><span class="nh">姓</span><input type="text" name="lastName" required autocomplete="family-name"></div>
+                        <div class="nc"><span class="nh">名</span><input type="text" name="firstName" required autocomplete="given-name"></div>
                     </div>
                 </div>
-                <div class="transport-wrap" id="taxiDetailWrap">
-                    <textarea name="transportDetail" rows="2" placeholder="乗り合わせが決まっている場合は同行者のお名前を記入してください"></textarea>
+
+                <!-- フリガナ -->
+                <div class="fb reveal">
+                    <div class="fl">フリガナ <span class="req">必須</span></div>
+                    <div class="name-row">
+                        <div class="nc"><span class="nh">セイ</span><input type="text" name="lastKana" required></div>
+                        <div class="nc"><span class="nh">メイ</span><input type="text" name="firstKana" required></div>
+                    </div>
                 </div>
+
+                <!-- 郵便番号 -->
+                <div class="fb reveal">
+                    <div class="fl">郵便番号 <span class="req">必須</span></div>
+                    <input type="text" name="postcode" required inputmode="numeric" maxlength="8">
+                </div>
+
+                <!-- 住所 -->
+                <div class="fb reveal">
+                    <div class="fl">ご住所 <span class="req">必須</span></div>
+                    <input type="text" name="address"  required autocomplete="street-address">
+                </div>
+
+                <!-- 電話番号 -->
+                <div class="fb reveal">
+                    <div class="fl">お電話番号 <span class="req">必須</span></div>
+                    <input type="tel" name="phone" required inputmode="tel">
+                </div>
+
+                <!-- 交通手段 -->
+                <div class="fb reveal">
+                    <div class="fl">交通手段 <span class="req">必須</span></div>
+                    <div class="radio-stack">
+                        <label class="rl"><input type="radio" name="transport" value="自家用車" checked><span>自家用車 (乗り合わせも含む)</span></label>
+                        <label class="rl"><input type="radio" name="transport" value="公共交通機関"><span>公共交通機関</span></label>
+                    </div>
+                    <div class="transport-wrap" id="transportWrap">
+                        <div class="radio-stack">
+                            <label class="rl"><input type="radio" name="taxi" value="タクシー利用しない" checked><span>タクシー利用しない</span></label>
+                            <label class="rl"><input type="radio" name="taxi" value="タクシー利用する" id="taxiYes"><span>タクシー利用する</span></label>
+                        </div>
+                    </div>
+                    <div class="transport-wrap" id="taxiDetailWrap">
+                        <textarea name="transportDetail" rows="2" placeholder="乗り合わせが決まっている場合は同行者のお名前を記入してください"></textarea>
+                    </div>
+                </div>
+    
+                <!-- アレルギー -->
+                <div class="fb reveal">
+                    <div class="fl">食物アレルギー</div>
+                    <div class="radio-stack">
+                        <label class="rl"><input type="radio" name="allergy" value="ございません" checked><span>ございません</span></label>
+                        <label class="rl"><input type="radio" name="allergy" value="ございます" id="allergyYes"><span>ございます</span></label>
+                    </div>
+                    <div class="allergy-wrap" id="allergyWrap">
+                        <input type="text" name="allergyDetail" placeholder="内容をご記入ください">
+                    </div>
+                </div>
+
             </div>
- 
-            <!-- アレルギー -->
-            <div class="fb reveal">
-                <div class="fl">食物アレルギー</div>
-                <div class="radio-stack">
-                    <label class="rl"><input type="radio" name="allergy" value="ございません" checked><span>ございません</span></label>
-                    <label class="rl"><input type="radio" name="allergy" value="ございます" id="allergyYes"><span>ございます</span></label>
-                </div>
-                <div class="allergy-wrap" id="allergyWrap">
-                    <input type="text" name="allergyDetail" placeholder="内容をご記入ください">
-                </div>
-            </div>
+
 
             <!-- メッセージ -->
             <div class="fb reveal">
