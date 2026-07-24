@@ -199,13 +199,13 @@ body {
 .year{
   width: 25%;
   max-width: 280px;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 
 .month{
-  width: 100%;
+  width: 80%;
   max-width: 280px;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 
 .day{
@@ -368,6 +368,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+/* attendanceFields内の各フォーム間の余白を統一 */
+#attendanceFields {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 /* フォームラベル */
