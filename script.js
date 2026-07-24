@@ -36,6 +36,7 @@ function initAttendanceToggle() {
 
   const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
   const attendanceFields = document.getElementById("attendanceFields");
+  const attendanceMessage = document.getElementById("attendanceMessage");
 
   if (!attendanceFields) return;
 
@@ -48,6 +49,7 @@ function initAttendanceToggle() {
       if (radio.value === "ご欠席") {
 
         attendanceFields.style.display = "none";
+        attendanceMessage.style.display = "none";
 
         requiredInputs.forEach(input => {
           input.required = false;
@@ -56,6 +58,7 @@ function initAttendanceToggle() {
       } else {
 
         attendanceFields.style.display = "block";
+        attendanceMessage.style.display = "block";
 
         requiredInputs.forEach(input => {
           input.required = true;
