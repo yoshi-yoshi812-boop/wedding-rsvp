@@ -188,7 +188,12 @@ function initFormSubmit() {
       });
 
       if (res.ok) {
-        showSuccessMessage(form);
+
+        const attendance =
+          form.querySelector('input[name="attendance"]:checked')?.value;
+
+        showSuccessMessage(form, attendance);
+
       } else {
         alert('送信に失敗しました。お手数ですが、もう一度お試しください。');
         btn.disabled = false;
@@ -203,15 +208,20 @@ function initFormSubmit() {
 }
 
 /* ── 送信成功メッセージの表示 ── */
-function showSuccessMessage(form) {
+function showSuccessMessage(form, attendance) {
 
     form.style.display = "none";
+
+    const image =
+        attendance === "ご欠席"
+            ? "thanks2.jpg"
+            : "thanks.jpg";
 
     const msg = document.createElement("div");
     msg.className = "success-msg show";
 
     msg.innerHTML = `
-        <img src="thanks.jpg"
+        <img src="${image}"
              alt="Thank you"
              class="thanks-image">
     `;
@@ -222,6 +232,4 @@ function showSuccessMessage(form) {
         behavior:"smooth",
         block:"center"
     });
-
 }
-
