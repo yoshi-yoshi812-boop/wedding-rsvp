@@ -370,12 +370,12 @@ body {
   gap: 12px;
 }
 
-/* attendanceFields内の各フォーム間の余白を統一 */
-#attendanceFields {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+#attendanceFields{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
+
 
 /* フォームラベル */
 .fl {
