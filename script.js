@@ -48,7 +48,7 @@ function initAttendanceToggle() {
 
       if (radio.value === "ご欠席") {
 
-        attendanceFields.style.display = "none";
+        attendanceFields.classList.add("hidden");
         attendanceMessage.style.display = "none";
 
         requiredInputs.forEach(input => {
@@ -57,7 +57,7 @@ function initAttendanceToggle() {
 
       } else {
 
-        attendanceFields.style.display = "";
+        attendanceFields.classList.remove("hidden");
         attendanceMessage.style.display = "block";
 
         requiredInputs.forEach(input => {
