@@ -57,7 +57,7 @@ function initAttendanceToggle() {
 
       } else {
 
-        attendanceFields.style.display = "block";
+        attendanceFields.style.display = "";
         attendanceMessage.style.display = "block";
 
         requiredInputs.forEach(input => {
