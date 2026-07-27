@@ -376,6 +376,9 @@ body {
     gap: 28px;
 }
 
+.hidden{
+    display:none !important;
+}
 
 /* フォームラベル */
 .fl {
@@ -423,8 +426,8 @@ textarea {
   outline: none;
   transition: border-color 0.22s var(--ease), box-shadow 0.22s var(--ease), background 0.22s var(--ease);
   letter-spacing: 0.05em;
-  -webkit-appearance: none;
 }
+
 input::placeholder, textarea::placeholder {
   color: var(--txt4);
   font-family: var(--font-placeholder);
